@@ -60,7 +60,7 @@ public class CustomerDaoImpl extends JdbcDaoSupport implements CustomerDao {
 
     @Override
     public List<Customer> findAllJdbcTemplate() {
-        String sql = "SELECT NAME FROM CUSTOMER";
+        String sql = "SELECT * FROM CUSTOMER";
         List<Customer> customers = (List<Customer>)getJdbcTemplate().query(
                 sql, new BeanPropertyRowMapper<>(Customer.class));
         return customers;
