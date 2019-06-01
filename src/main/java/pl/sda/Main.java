@@ -19,5 +19,9 @@ public class Main {
             System.out.println(customer);
         }
 
+        System.out.println("----------------");
+        List<Customer> allJdbcTemplate = dao.findAllJdbcTemplate();
+        allJdbcTemplate.forEach(System.out::println);
+
     }
 }
